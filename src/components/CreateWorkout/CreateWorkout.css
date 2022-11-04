@@ -1,2 +1,33 @@
-@import '../../index.css';
+/* @import '../../index.css'; */
+
+.workout {
+  margin: 15% auto;
+  padding: 1em;
+  height: 70vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.workout__title {
+    text-transform: uppercase;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.workout__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
 

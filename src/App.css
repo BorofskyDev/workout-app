@@ -1,0 +1,34 @@
+/* ------------------- */
+/* Utility Classes     */
+/* ------------------- */
+
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: var(--fw-bolder);
+}
+
+:focus {
+    outline: 3px solid hsl(var(--clr-primary));
+    outline-offset: 3px;
+}
+
+/* ------------------- */
+/* Typography          */
+/* ------------------- */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1 )}
+h2 { font-size: var(--fs-h2 )}
+h3 { font-size: var(--fs-h3 )}
