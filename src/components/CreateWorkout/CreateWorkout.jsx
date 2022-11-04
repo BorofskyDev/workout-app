@@ -13,6 +13,8 @@ function CreateWorkout() {
 
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
+    const limit = 3;
+    setFormData(event.target.value.slice(0, limit));
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
@@ -37,6 +39,8 @@ function CreateWorkout() {
               name="exerciseName"
               value={formData.exerciseName}
               className="workout__input"
+              maxLength={25}
+              required
             />
           </div>
           <div className="workout__box sets">
@@ -44,11 +48,13 @@ function CreateWorkout() {
               Enter number of sets
             </label>
             <input
-              type="number"
+              type="text"
               onChange={handleChange}
               name="sets"
               value={formData.value}
               className="workout__number"
+              maxLength={3}
+              required
             />
           </div>
           <div className="workout__box reps">
@@ -56,11 +62,13 @@ function CreateWorkout() {
               Enter number of reps
             </label>
             <input
-              type="number"
+              type="text"
               onChange={handleChange}
               name="reps"
               value={formData.reps}
               className="workout__number"
+              maxLength={3}
+              required
             />
           </div>
           <div className="workout__box weight-type">
@@ -73,20 +81,21 @@ function CreateWorkout() {
               checked={formData.isWeight}
               onChange={handleChange}
               name="isWeight"
-              className="workout__check"
+              className="workout__check "
+              required
             />
           </div>
           <div className="workout__box rest-period">
             <label htmlFor="restPeriod" className="workout__label">
-              Enter rest duratio in seconds (e.g. 2 Minutes after exercise would
-              equal 120 for the input)
+              Enter rest duration in seconds
             </label>
             <input
-              type="number"
+              type="text"
               onChange={handleChange}
               name="restPeriod"
               value={formData.restPeriod}
               className="workout__number"
+              maxLength={3}
             />
           </div>
           <div className="workout__box workout-type">
