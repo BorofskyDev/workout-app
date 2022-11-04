@@ -116,8 +116,8 @@ function CreateWorkout() {
               <option value="upperBody">Other</option>
             </select>
           </div>
-          <div className="workout__box submit-btn">
-            <button className="btn">Submit</button>
+          <div className="workout__box submit-button">
+            <button className="submit-btn">Submit</button>
           </div>
         </form>
       </div>
