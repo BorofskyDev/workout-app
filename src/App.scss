@@ -1,0 +1,65 @@
+@import './index.scss';
+
+/* ------------------- */
+/* Utility Classes     */
+/* ------------------- */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus {
+  outline: 3px solid $clr-primary;
+  outline-offset: 3px;
+}
+
+/* ------------------- */
+/* Typography          */
+/* ------------------- */
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: $fs-h1;
+}
+h2 {
+  font-size: $fs-h2;
+}
+h3 {
+  font-size: $fs-h3;
+}
+
+/* ------------------- */
+/* Components          */
+/* ------------------- */
+
+.submit-btn {
+  cursor: pointer;
+  padding: 1em 4em;
+  margin: 3em auto;
+  border-radius: 0.625em;
+  color: $clr-light;
+  text-transform: uppercase;
+  letter-spacing: 0.225em;
+  border-color: $clr-primary;
+  background-color: transparent;
+  box-shadow: 0 0 0.8em 0.225em rgba(0, 0, 0, 0.8),
+    0 0 2em 0.125em rgba(0, 0, 0, 0.4);
+  transform: scale(1);
+  transition: all 500ms ease-in-out;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: $clr-primary;
+  color: $clr-dark;
+  border-color: $clr-accent;
+  box-shadow: 0 0 1em 0.125em rgba(0, 0, 0, 0.6), 0 0 4em rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}

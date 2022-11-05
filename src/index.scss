@@ -4,44 +4,32 @@
 /* Custom properties   */
 /* ------------------- */
 
-:root{
-    --ff-body: 'Poppins', sans-serif;
+$ff-body: 'Poppins', sans-serif;
 
-    --fw-reg: 300;
-    --fw-emph: 400;
-    --fw-bold: 700;
-    --fw-bolder: 900;
+$clr-primary: #F10E33;
+$clr-secondary: #1C044A;
+$clr-accent: #0EF1CC;
+$clr-light: #FCF3F3;
+$clr-dark: #1A1818;
 
-    --clr-light: 207 21% 92%;
-    /* hex #E5EAEE rgb(229, 234, 238) */
-    --clr-cool: 209 100% 20%;
-    /* hex #003566 rgb(0, 53, 102) */
-    --clr-dark: 216 100% 4%;
-    /* hex #000814 rgb(0, 8, 20) */
-    --clr-primary: 50 100% 52%;
-    /* hex #FFD60A rgb(255, 214, 10)*/
-    --clr-secondary: 46 100% 50%;
-    /* hex #FFC300 rgb(255, 195, 0)*/
+$fw-reg: 400;
+$fw-bold: 700;
+$fw-bolder: 900;
 
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
-}
+$fs-h1: 3rem;
+$fs-h2: 2.25rem;
+$fs-h3: 1.25rem;
+$fs-body: 1rem;
 
 @media (min-width: 35em){
-  :root {
-    --fs-h1: 3.5rem;
-  }
+  $fs-h1: 3.5rem;
 }
 
 @media (min-width: 55em){
-    :root {
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
-    }
+  $fs-h1: 4.5rem;
+  $fs-h2: 3.75rem;
+  $fs-h3: 1.5rem;
+  $fs-body: 1.125rem;
 }
 
 /* ------------------- */
@@ -87,12 +75,11 @@ a {
 }
 
 body {
-  background: hsl(var(--clr-dark));
-  color: hsl(var(--clr-light));
+  background: $clr-dark;
+  color: $clr-light;
   margin: 0;
-  font-family: var(--ff-body);
-  font-size: var(--fs-body);
-  line-height: 1.6;
+  font-family: $ff-body;
+  font-size: $fs-body;
 }
 
 html {
@@ -139,8 +126,8 @@ select {
 .skip-to-content {
   position: absolute;
   z-index: 9999;
-  background: hsl(var(--clr-light));
-  color: hsl(var(--clr-dark));
+  background: $clr-light;
+  color: $clr-dark;
   padding: 0.5em 1em;
   margin-inline: auto;
   transform: translateY(-200%);
