@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CreateSet from './CreateSet';
 import './CreateWorkout.css';
 
 function CreateWorkout() {
@@ -10,7 +11,8 @@ function CreateWorkout() {
     restPeriod: '',
     workoutType: '',
   });
-
+  const [displaySet, setDisplaySet] = useState([])
+  
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
     const limit = 3;
@@ -21,6 +23,10 @@ function CreateWorkout() {
         [name]: type === 'checkbox' ? checked : value,
       };
     });
+  }
+
+  function addSet(){
+    setDisplaySet(displaySet.concat(<CreateSet key={displaySet.length} />))
   }
 
   return (
@@ -43,48 +49,10 @@ function CreateWorkout() {
               required
             />
           </div>
-          <div className="workout__box sets">
-            <label htmlFor="sets" className="workout__label">
-              Enter number of sets
-            </label>
-            <input
-              type="text"
-              onChange={handleChange}
-              name="sets"
-              value={formData.value}
-              className="workout__number"
-              maxLength={3}
-              required
-            />
-          </div>
-          <div className="workout__box reps">
-            <label htmlFor="reps" className="workout__label">
-              Enter number of reps
-            </label>
-            <input
-              type="text"
-              onChange={handleChange}
-              name="reps"
-              value={formData.reps}
-              className="workout__number"
-              maxLength={3}
-              required
-            />
-          </div>
-          <div className="workout__box weight-type">
-            <label htmlFor="isWeight" className="workout__label">
-              Uncheck box if exercise uses body weight
-            </label>
-            <input
-              type="checkbox"
-              id="isWeight"
-              checked={formData.isWeight}
-              onChange={handleChange}
-              name="isWeight"
-              className="workout__check "
-              required
-            />
-          </div>
+            <div className="workout__add-set">
+              <p onClick={addSet}>Add Set</p>
+              {displaySet}
+            </div>
           <div className="workout__box rest-period">
             <label htmlFor="restPeriod" className="workout__label">
               Enter rest duration in seconds
