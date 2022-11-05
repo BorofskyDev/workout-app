@@ -163,7 +163,7 @@
     &--section {
       color: $clr-light;
       text-shadow: 0 0 3px #000;
-      background-color: adjust-hue($clr-primary, 20%);
+      background-color: darken($clr-primary, 20%);
       padding: 0.3em 3em;
       border-radius: 1em 0 0 1em;
       width: 100%;
