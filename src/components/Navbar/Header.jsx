@@ -1,10 +1,26 @@
-import { GiWeightLiftingUp } from 'react-icons/gi'
-import './Navbar.scss'
+import { GiWeightLiftingUp } from 'react-icons/gi';
 
-function Header() {
+
+function Header(props) {
+    const { menu, setMenu } = props
   return (
-    <div>Header</div>
-  )
+    <header className="header">
+      <div className="header__logo">
+        <GiWeightLiftingUp className="header__icon" />
+        <p className="header__logo--title">Father Figure - the workout app</p>
+      </div>
+      <div className="header__button">
+        <button
+          className={`menu__trigger ${menu ? 'menu__close' : ''}`}
+          onClick={() => setMenu(!menu)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
