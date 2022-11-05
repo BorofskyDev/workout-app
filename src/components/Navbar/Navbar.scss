@@ -100,6 +100,13 @@
     overflow: hidden;
   }
 
+  &__layer,
+  &__nav {
+    border-radius: 0.625em 0 0 0.625em;
+    border: 1px solid;
+    box-shadow: 0 0.5em 2em 0 rgba($clr-secondary, 0.37);
+  }
+
   &__layer {
     position: absolute;
     top: 0;
@@ -109,11 +116,9 @@
     height: 100%;
     width: 100%;
     background: rgba($clr-primary, 0.2);
-    box-shadow: 0 8px 32px 0 rgba($clr-secondary, 0.37);
-    backdrop-filter: blur(8.5px);
-    -webkit-backdrop-filter: blur(8.5px);
-    border-radius: 10px;
-    border: 1px solid $clr-secondary;
+    backdrop-filter: blur(0.5em);
+    -webkit-backdrop-filter: blur(0.5em);
+    border-color: $clr-secondary;
     z-index: -1;
   }
 
@@ -125,12 +130,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: rgba(1, 1, 30, 0.45);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(16.5px);
-    -webkit-backdrop-filter: blur(16.5px);
-    border-radius: 10px;
-    border: 1px solid $clr-primary;
+    background: rgba($clr-dark, 0.55);
+    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+    border-color: $clr-primary;
+
     &::-webkit-scrollbar {
       width: 0;
     }
@@ -217,7 +221,6 @@
 
     &:hover,
     &:focus {
-      color: $clr-dark;
       transform: scale(1.05);
       box-shadow: 0 0 1em 0.125em rgba(0, 0, 0, 0.8),
         0 0 3em 0.125em rgba(0, 0, 0, 0.6);
